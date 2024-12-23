@@ -1,0 +1,157 @@
+*:root{
+    --paleBlue:hsl(225, 100%, 94%);
+    --brightBLue: hsl(245, 75%, 52%);
+
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --DesatuaratedBlue:hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--paleBlue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+.card{
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    width: 350px;
+    overflow: hidden;
+    transform: scale(0.9);
+}
+.card .img_top{
+    width: 100%;
+}
+.card_section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 33px;
+}
+.card_section h2{
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+    color: var(--darkBlue);
+}
+.card_section .main_para{
+    font-size: 0.82rem;
+    max-width: 35ch;
+    line-height: 20px;
+    color: var(--DesatuaratedBlue);
+}
+.card_section .annual_plan{
+    background-color: var(--veryPaleBlue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16.6px 17px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 27px;
+    margin-top: 20px;
+}
+.card_section .plan{
+    display: flex;
+}
+.card_section .plan_child{
+    margin-left: 13px;
+    font-size: 0.8rem;
+    text-align: left;
+    transform: translateY(5px);
+    color: var(--darkBlue);
+}
+.card_section .plan_child .dollar{
+    color: var(--DesatuaratedBlue);
+    margin-top: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+.card_section a{
+    font-size: 0.76rem;
+    color: var(--brightBLue);
+    font-weight: bold;
+}
+.card_section a:hover{
+    text-decoration: none;
+
+}
+.card_section .plan img{
+   width: 46px;
+}
+.card_section button{
+    width: 100%;
+    background-color: var(--brightBLue);
+    border: none;
+    border-radius: 10px;
+    padding: 14px 30px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.payment{
+    box-shadow: 0px 5px 15px hsla(223, 47%, 23%, 0.377);
+}
+.payment:hover{
+    opacity: 0.7;
+}
+.card_section .cencel{
+    margin-top: 20px;
+    margin-bottom: 7px;
+    padding: 0;
+    background: transparent;
+    color: var(--DesatuaratedBlue);
+}
+button.cencel:hover{
+    color: var(--darkBlue);
+}
+.attribution { font-size: 11px; text-align: center;margin-top: 0px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:450px) {
+    body{
+        background-image: none;
+    }
+    .card{
+        background-color: white;
+        border-radius: 20px;
+        border: none;
+        width: 85%;
+        margin: auto;
+        overflow: hidden;
+        transform: scale(1);
+    }
+    .card_section h2{
+        margin-top: 3px;
+        margin-bottom: 14px;
+    }
+    .card_section .main_para{
+        font-size: 0.95rem;
+        max-width: 30ch;
+        line-height: 1.55em;
+    }
+    .card_section button{
+        font-size: 0.9rem;
+    }
+}
